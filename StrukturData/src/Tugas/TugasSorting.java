@@ -18,11 +18,7 @@ public class TugasSorting {
         }
 
         for (char c : array) {
-        	if (array.length == 26) {
-               System.out.print(c + "-");
-        	} else {
-        		System.out.print(c);
-        	}
+            System.out.print(c + "-");
         }
     }
 }
