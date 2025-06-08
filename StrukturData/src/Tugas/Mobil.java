@@ -20,7 +20,7 @@ public class Mobil {
 
         void tambahMobil(String platNomor) {
             daftarMobil.add(new Mobil(platNomor));
-            System.out.println("Mobil dengan plat " + platNomor + " berhasil ditambahkan.");
+            System.out.println("Mobil dengan plat " + platNomor + " berhasil ditambahkan.,kl[[");
         }
 
         void keluarkanMobil(String platNomor) {
@@ -69,10 +69,8 @@ public class Mobil {
         Scanner scanner = new Scanner(System.in);
         Parkiran parkiran = new Parkiran();
 
-        String[] platAwal = {
-            "BA1111AA", "BA2222BB", "BA3333CC",
-            "BA4444DD", "BA5555EE", "BA6666FF", "BA7777GG"
-        };
+        String[] platAwal = { "BA1111AA", "BA2222BB", "BA3333CC", "BA4444DD", "BA5555EE", "BA6666FF", "BA7777GG"};
+        
         for (String plat : platAwal) {
             parkiran.tambahMobil(plat);
         }
@@ -109,7 +107,7 @@ public class Mobil {
                     parkiran.cariMobil(platCari);
                     break;
                 case 5:
-                    System.out.println("Terima kasih. Program selesai.");
+                    System.out.println("Terima kasih! Program telah selesai.");
                     return;
                 default:
                     System.out.println("Pilihan tidak valid, silakan coba lagi.");
