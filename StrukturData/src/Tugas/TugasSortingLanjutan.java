@@ -29,11 +29,12 @@ public class TugasSortingLanjutan {
                 data[count] = inputNum;
                 count++;
             } else {
-                System.out.println("Bukan bilangan prima! Masukkan ulang:");
+                System.out.println("Bukan bilangan prima!");
+                System.out.println("Silakan masukkan lagi: ");
             }
         }
 
-        System.out.println("Sebelum sorting: " + Arrays.toString(data));
+        System.out.println("Deret awal: " + Arrays.toString(data));
         System.out.println("Algoritma: Merge Sort");
         System.out.println("Proses sorting:");
 
