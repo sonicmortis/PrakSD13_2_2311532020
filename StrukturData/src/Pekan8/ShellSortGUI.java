@@ -17,8 +17,8 @@ public class ShellSortGUI extends JFrame {
 
     private int i = 0, j = 0, gap = 0;
     private boolean sorting = false;
-    private boolean isMapping = false;
-    private int temp;
+    private boolean isMapping = false;  //Nama: M. Luthfi Kautsar
+    private int temp;                   //NIM: 2311532020
     private int stepCount = 1;
 
     public static void main(String[] args) {

@@ -15,7 +15,6 @@ public class MergeSortGUI extends JFrame {
     private JPanel panelArray;
     private JTextArea stepArea;
 
-    // Merge Sort specific variables
     private Queue<int[]> mergeQueue = new LinkedList<>();
     private int[] temp;
     private int left, right, mid;
@@ -25,8 +24,8 @@ public class MergeSortGUI extends JFrame {
     private int stepCount = 1;
 
     public static void main(String[] args) {
-        EventQueue.invokeLater(() -> {
-            try {
+        EventQueue.invokeLater(() -> {                //Nama: M. Luthfi Kautsar Rizata
+            try {                                     //NIM: 2311532020
                 MergeSortGUI frame = new MergeSortGUI();
                 frame.setVisible(true);
             } catch (Exception e) {
@@ -88,7 +87,6 @@ public class MergeSortGUI extends JFrame {
             return;
         }
 
-        // Initialize merge sort
         mergeQueue.clear();
         generateMergeSteps(0, array.length - 1);
         isMerging = true;
@@ -142,12 +140,10 @@ public class MergeSortGUI extends JFrame {
 
             stepArea.append("Langkah " + stepCount++ + ": Merge data dari " + left + " ke " + right + "\n");
             
-            // Highlight the current range being merged
             for (int x = left; x <= right; x++) {
                 labelArray[x].setBackground(Color.YELLOW);
             }
             
-            // Start the merging process
             while (i <= mid && j <= right) {
                 if (array[i] <= array[j]) {
                     temp[k++] = array[i++];
@@ -162,7 +158,6 @@ public class MergeSortGUI extends JFrame {
                 }
             }
 
-            // Copy remaining elements
             while (i <= mid) {
                 temp[k++] = array[i++];
                 labelArray[i-1].setBackground(Color.CYAN);
@@ -177,7 +172,6 @@ public class MergeSortGUI extends JFrame {
                 return;
             }
 
-            // Prepare to copy back to original array
             copying = true;
             k = 0;
             return;

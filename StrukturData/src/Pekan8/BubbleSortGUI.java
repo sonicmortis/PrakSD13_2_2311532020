@@ -31,8 +31,8 @@ public class BubbleSortGUI extends JFrame {
 	}
 
 	public BubbleSortGUI() {
-		setTitle("Bubble Sort Langkah per Langkah");
-		setSize(750, 400);
+		setTitle("Bubble Sort Langkah per Langkah");   //Nama: M. Luthfi Kautsar
+		setSize(750, 400);                             //NIM: 2311532020
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setLayout(new BorderLayout());
@@ -114,7 +114,6 @@ public class BubbleSortGUI extends JFrame {
 	        JOptionPane.showMessageDialog(this, "Sorting selesai!");
 	        return;
 	    }
-
 	    resetHighlights();
 	    StringBuilder stepLog = new StringBuilder();
 	    labelArray[j].setBackground(Color.CYAN);
@@ -133,7 +132,6 @@ public class BubbleSortGUI extends JFrame {
 	        stepLog.append("Langkah ").append(stepCount).append(": Tidak ada pertukaran antara ke-")
 	               .append(j).append(" dan ke-").append(j + 1).append("\n");
 	    }
-
 	    stepLog.append("Hasil: ").append(arrayToString(array)).append("\n\n");
 	    stepArea.append(stepLog.toString());
 	    updateLabels();

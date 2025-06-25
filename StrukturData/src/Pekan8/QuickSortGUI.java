@@ -15,12 +15,11 @@ public class QuickSortGUI extends JFrame {
     private JPanel panelArray;
     private JTextArea stepArea;
 
-    // Quick Sort specific variables
-    private Stack<int[]> stack = new Stack<>();
-    private int pivotIndex = -1;
+    private Stack<int[]> stack = new Stack<>();  //Nama: M. Luthfi Kautsar
+    private int pivotIndex = -1;                 //NIM: 2311532020
     private int i = -1, j = -1;
     private boolean partitioning = false;
-    private boolean sorting = false;
+    private boolean sorting = false;      
     private int stepCount = 1;
 
     public static void main(String[] args) {
@@ -87,7 +86,6 @@ public class QuickSortGUI extends JFrame {
             return;
         }
 
-        // Initialize quick sort
         stack.clear();
         stack.push(new int[]{0, array.length - 1});
         sorting = true;
@@ -125,7 +123,6 @@ public class QuickSortGUI extends JFrame {
             }
             return;
         }
-
         if (!partitioning) {
             int[] range = stack.pop();
             int low = range[0];
@@ -164,7 +161,6 @@ public class QuickSortGUI extends JFrame {
                 labelArray[pivotIndex].setBackground(Color.YELLOW);
                 stepArea.append("Langkah " + stepCount++ + ": Letakkan pivot di posisi " + pivotIndex + "\n");
                 
-                // Push right partition first (to process left first)
                 stack.push(new int[]{pivotIndex + 1, pivotIndex == -1 ? pivotIndex : array.length - 1});
                 stack.push(new int[]{stack.peek()[0] - pivotIndex - 1, pivotIndex - 1});
                 partitioning = false;
