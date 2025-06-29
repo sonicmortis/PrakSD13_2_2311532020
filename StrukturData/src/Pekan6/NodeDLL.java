@@ -8,6 +8,8 @@ public class NodeDLL {
 	
 	//konstruktor
 	public NodeDLL(int data) {
+		System.out.println("Muhammad Luthfi Kautsar");
+		System.out.println("2311532020");
 		this.data = data;
 		this.next = null;
 		this.prev = null;
