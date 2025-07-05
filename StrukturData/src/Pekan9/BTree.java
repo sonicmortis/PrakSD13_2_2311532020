@@ -2,7 +2,7 @@ package Pekan9;
 
 public class BTree {
     private Node root;
-    private Node currentNode;
+    private Node currentNode;   // Luthfi Kautsar 2311532020
 
     public BTree() {
         root = null;

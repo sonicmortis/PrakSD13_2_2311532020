@@ -8,16 +8,14 @@ public class TugasSearchingGraf {
     static List<String> visited = new ArrayList<>();
 
     public static void main(String[] args) {
-        // ---------------------------
+    
         // Identitas Mahasiswa
-        // ---------------------------
         String nama = "Muhammad Luthfi Kautsar Rizata";
-        String nim = "2311532020"; // Ganti dengan NIM kamu
+        String nim = "2311532020"; 
         char digitTerakhir = nim.charAt(nim.length() - 1);
         boolean isGenap = Character.getNumericValue(digitTerakhir) % 2 == 0;
 
         // Setup graph (undirected)
-        // ---------------------------
         graph.put("A", Arrays.asList("B", "C"));
         graph.put("B", Arrays.asList("A", "D"));
         graph.put("C", Arrays.asList("A", "D", "E"));
@@ -31,15 +29,12 @@ public class TugasSearchingGraf {
         String goalNode = "G";
 
         // Output identitas
-        // ---------------------------
         System.out.println("Nama: " + nama);
         System.out.println("NIM: " + nim);
         System.out.println("Node awal: " + startNode);
         System.out.println("Node tujuan: " + goalNode);
         System.out.println("Algoritma: " + (isGenap ? "BFS" : "DFS"));
 
-        // Jalankan pencarian
-        // ---------------------------
         if (isGenap) {
             bfs(startNode, goalNode);
         } else {
@@ -48,7 +43,6 @@ public class TugasSearchingGraf {
     }
 
     // Implementasi DFS
-    // ---------------------------
     public static void dfs(String current, String goal) {
         visited.clear();
         List<String> path = new ArrayList<>();
@@ -70,12 +64,11 @@ public class TugasSearchingGraf {
                 if (dfsRecursive(neighbor, goal, path)) return true;
             }
         }
-        path.remove(path.size() - 1); // backtrack
+        path.remove(path.size() - 1); 
         return false;
     }
 
     // Implementasi BFS
-    // ---------------------------
     public static void bfs(String start, String goal) {
         visited.clear();
         Map<String, String> parent = new HashMap<>();
@@ -118,7 +111,6 @@ public class TugasSearchingGraf {
     }
 
     // Cetak rute akhir
-    // ---------------------------
     public static void printPath(List<String> path) {
         System.out.println("Tujuan " + path.get(path.size() - 1) + " ditemukan");
         System.out.print("Rute: ");

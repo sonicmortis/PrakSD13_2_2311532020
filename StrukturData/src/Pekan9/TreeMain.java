@@ -4,7 +4,7 @@ public class TreeMain {
 
 	public static void main(String[] args) {
 		// Membuat Pohon
-		BTree tree = new BTree();
+		BTree tree = new BTree();  // Luthfi Kautsar 2311532020
 		System.out.print("Jumlah simpul awal pohon: ");
 		System.out.println(tree.countNodes());
 		

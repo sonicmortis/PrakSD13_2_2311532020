@@ -36,7 +36,7 @@ public class GraphTraversal {
 		if (visited.contains(current)) return;
 		visited.add(current);
 		System.out.print(current + " ");
-		for(String neighbor : graph.getOrDefault(current, new ArrayList<>())); {
+		for(String neighbor : graph.getOrDefault(current, new ArrayList<>())) {
 			dfsHelper(neighbor, visited);
 		}
 	}

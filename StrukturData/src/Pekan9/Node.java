@@ -23,7 +23,7 @@ public class Node {
 		}
 	}
 	
-	public Node getLeft () {
+	public Node getLeft () { 
 		return left;
 	}
 	
@@ -63,7 +63,7 @@ public class Node {
 		}
 		printInorder(node.left);
 		System.out.print(node.data + " ");
-		printInorder(right);
+		printInorder(node.right);
 	}
 	
 	public String print() {
@@ -71,14 +71,14 @@ public class Node {
 	}
 	
 	public String print(String prefix, boolean isTail, String sb) {
-		if (right == null) {
-			right.print(prefix + (isTail ? "|    " : "    "), false, sb);
-		}
-		System.out.println(prefix + (isTail ? "\\--" : "/-- ") + data);
-		
-		if (left != null) {
-			left.print(prefix + (isTail ? "   " : "|   "), true, sb);
-		}
-		return sb;
+	    if (right != null) {
+	        right.print(prefix + (isTail ? "|    " : "    "), false, sb);
+	    }
+	    System.out.println(prefix + (isTail ? "\\--" : "/-- ") + data);
+	    if (left != null) {
+	        left.print(prefix + (isTail ? "   " : "|   "), true, sb);
+	    }
+	    return sb;
 	}
+
 }
